@@ -1,0 +1,136 @@
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .container {
+    border-radius: 24px;
+    height: auto;
+    min-height: auto;
+    max-width: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    min-height: auto;
+  }
+
+  .illustration {
+    order: -1;
+    height: 250px;
+    min-height: 250px;
+    width: calc(100% - 3rem);
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    border-radius: 16px;
+    background: url("../assets/images/illustration-sign-up-mobile.svg") no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+
+  .form-content {
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .benefits-list {
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .submit-btn {
+    padding: 1.125rem;
+    font-size: 1rem;
+  }
+
+  /* Success message mobile styles */
+  .success-container {
+    padding: 2.5rem 1.5rem;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 24px;
+    margin: 2rem 0;
+  }
+
+  .success-container.show {
+    display: flex;
+  }
+
+  .success-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .success-container p {
+    margin-bottom: 2rem;
+    flex: none;
+  }
+
+  .dismiss-btn {
+    width: 100%;
+    padding: 1.125rem;
+    margin-top: auto;                /* Sticks to bottom */
+    margin-bottom: 2rem;             /* Safe area padding */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .success-container h1 {
+    font-size: 2.25rem;
+  }
+
+  .form-content {
+    padding: 2rem 1.25rem 2.25rem 1.25rem;
+  }
+
+  .success-container {
+    padding: 2rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .benefits-list li {
+    font-size: 0.95rem;
+  }
+
+  .illustration {
+    height: 220px;
+    min-height: 220px;
+    margin: 1.25rem 1.25rem 0 1.25rem;
+  }
+  
+}

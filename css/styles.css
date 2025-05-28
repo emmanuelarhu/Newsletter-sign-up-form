@@ -1,0 +1,326 @@
+/* CSS Variables */
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-slate-grey);
+  background-color: var(--charcoal-grey);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Container */
+.container {
+  background: var(--white);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
+  max-width: 840px;
+  width: 90%;
+  position: relative;
+}
+
+/* Main Form Layout */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  min-height: 500px;
+  background: var(--white);
+}
+
+.form-content {
+  padding: 3.5rem 2.5rem 3.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: small;
+}
+
+/* Typography */
+.form-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.form-content p {
+  margin-bottom: 1.5rem;
+  color: var(--dark-slate-grey);
+}
+
+/* Benefits List */
+.benefits-list {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.2rem;
+  gap: 1rem;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  background: url("../assets/images/icon-list.svg") no-repeat center center;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--dark-slate-grey);
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--grey);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--dark-slate-grey);
+  box-shadow: 0 0 0 1px var(--dark-slate-grey);
+}
+
+.form-group input:hover {
+  border-color: var(--dark-slate-grey);
+}
+
+.form-group input.error {
+  border-color: var(--tomato);
+  background-color: rgba(255, 97, 85, 0.15);
+  color: var(--tomato);
+}
+
+/* Error Messages */
+.error-message {
+  color: var(--tomato);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:hover {
+  background: var(--tomato);
+  box-shadow: 0 16px 32px rgba(255, 97, 85, 0.25);
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 97, 85, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.dismiss-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dismiss-btn:hover {
+  background: var(--tomato);
+  box-shadow: 0 16px 32px rgba(255, 97, 85, 0.25);
+}
+
+.dismiss-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 97, 85, 0.3);
+}
+
+/* Illustration */
+.illustration {
+  background: url("../assets/images/illustration-sign-up-desktop.svg") no-repeat center center;
+  background-size: 95%;
+  height: 95%;
+  min-height: 500px;
+  width: 95%;
+  position: relative;
+  margin: 1rem;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+/* Success Message */
+.success-container {
+  display: none;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 4rem 3.5rem;
+  background: var(--white);
+  border-radius: 24px;
+}
+
+.success-container.show {
+  display: block;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: url("../assets/images/icon-success.svg") no-repeat center center;
+  background-size: contain;
+  margin-bottom: 2.5rem;
+}
+
+.success-container h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.success-container p {
+  margin-bottom: 2.5rem;
+  color: var(--dark-slate-grey);
+}
+
+.user-email {
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+}
+
+/* Loading State */
+.submit-btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Focus States */
+.form-group input:focus-visible {
+  outline: 2px solid var(--tomato);
+  outline-offset: 2px;
+}
+
+.submit-btn:focus-visible,
+.dismiss-btn:focus-visible {
+  outline: 2px solid var(--tomato);
+  outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+.container * {
+  transition: all 0.2s ease;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .form-group input {
+    border-width: 2px;
+  }
+  
+  .submit-btn,
+  .dismiss-btn {
+    border: 2px solid transparent;
+  }
+}
