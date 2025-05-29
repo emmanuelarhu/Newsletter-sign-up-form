@@ -246,7 +246,7 @@ python -m http.server 8000
    ```
 
 ### Code Style Guidelines
-![Code Style Guide](./images/code-style.png)
+<!-- ![Code Style Guide](./images/code-style.png) -->
 
 - **HTML:** Semantic markup, proper indentation
 - **CSS:** BEM methodology, mobile-first approach
