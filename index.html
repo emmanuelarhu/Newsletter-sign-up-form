@@ -1,86 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Newsletter Sign-up Form</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="./assets/fonts/Roboto-Bold.ttf" crossorigin>
-  <link rel="preconnect" href="./assets/fonts/Roboto-Regular.ttf" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/responsive.css">
-</head>
-<body>
-  <div class="container">
-    <!-- Main Sign-up Form -->
-    <div class="form-container" id="signupForm">
-      <div class="form-content">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        
-        <ul class="benefits-list">
-          <li>
-            <span class="check-icon" aria-hidden="true"></span>
-            <span>Product discovery and building what matters</span>
-          </li>
-          <li>
-            <span class="check-icon" aria-hidden="true"></span>
-            <span>Measuring to ensure updates are a success</span>
-          </li>
-          <li>
-            <span class="check-icon" aria-hidden="true"></span>
-            <span>And much more!</span>
-          </li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Newsletter Sign-up Form</title>
 
-        <form id="newsletterForm" novalidate>
-          <div class="form-group">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <label for="email">Email address</label>
-              <span class="error-message" id="emailError" role="alert" aria-live="polite"></span>
-            </div>
-            <div class="input-wrapper">
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="email@company.com"
-                aria-describedby="emailError"
-                autocomplete="email"
-                required
+    <!-- Fonts -->
+    <link rel="preconnect" href="./assets/fonts/Roboto-Bold.ttf" crossorigin />
+    <link
+      rel="preconnect"
+      href="./assets/fonts/Roboto-Regular.ttf"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main Sign-up Form -->
+      <div class="form-container" id="signupForm">
+        <div class="form-content">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <ul class="benefits-list">
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <span>Measuring to ensure updates are a success</span>
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true"></span>
+              <span>And much more!</span>
+            </li>
+          </ul>
+
+          <form id="newsletterForm" novalidate>
+            <div class="form-group">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
               >
+                <label for="email">Email address</label>
+                <span
+                  class="error-message"
+                  id="emailError"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@company.com"
+                  aria-describedby="emailError"
+                  autocomplete="email"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <span class="btn-text">Subscribe to monthly newsletter</span>
-          </button>
-        </form>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-text">Subscribe to monthly newsletter</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="illustration" aria-hidden="true"></div>
       </div>
-      
-      <div class="illustration" aria-hidden="true"></div>
+
+      <!-- Success Message -->
+      <div class="success-container" id="successMessage">
+        <div class="success-icon" aria-hidden="true"></div>
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span class="user-email" id="userEmail">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <button type="button" class="dismiss-btn" id="dismissBtn">
+          Dismiss message
+        </button>
+      </div>
     </div>
 
-    <!-- Success Message -->
-    <div class="success-container" id="successMessage">
-      <div class="success-icon" aria-hidden="true"></div>
-      <h1>Thanks for subscribing!</h1>
-      <p>
-        A confirmation email has been sent to 
-        <span class="user-email" id="userEmail">ash@loremcompany.com</span>. 
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button type="button" class="dismiss-btn" id="dismissBtn">Dismiss message</button>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="./js/validation.js"></script>
-  <script src="./js/main.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="./js/validation.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
